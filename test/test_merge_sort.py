@@ -5,6 +5,7 @@ Tests merge sort algorithm.
 
 import pytest
 from sorting_method.merge_sort import merge_sort
+from multiprocessing_sorting_method.multiprocessing_merge_sort import multiprocessing_merge_sort
 
 
 class TestMergeSort:
@@ -20,4 +21,11 @@ class TestMergeSort:
         """ Tests merge sort algorithm with 6 elements. """
         expected = [5, 6, 7, 11, 12, 13]
         merge_sort(value_list)
+        assert expected == value_list
+
+    def test_multiprocessing_merge_sort_6_element(self, value_list):
+        """ Tests merge sort algorithm with 6 elements. """
+        expected = [5, 6, 7, 11, 12, 13]
+        counter_processing = 0
+        multiprocessing_merge_sort(value_list, counter_processing)
         assert expected == value_list
