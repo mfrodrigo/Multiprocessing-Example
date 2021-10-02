@@ -24,7 +24,7 @@ class TestMergeSort:
         assert expected == value_list
 
     def test_multiprocessing_merge_sort_6_element(self, value_list):
-        """ Tests merge sort algorithm with 6 elements. """
+        """ Tests multiprocessing merge sort algorithm with 6 elements. """
         expected = [5, 6, 7, 11, 12, 13]
         counter_processing = 0
         multiprocessing_merge_sort(value_list, counter_processing)

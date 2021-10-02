@@ -6,13 +6,12 @@ import multiprocessing
 
 def multiprocessing_merge_sort(unsorted_list, counter_processing):
     """
-    Recursive method to sort list. This method has pass-by-reference argument,
+    Recursive method to sort list with uses multiprocessing. This method has pass-by-reference argument,
     so it doesn't need to return the sorted list in the end.
     Args:
         unsorted_list: (list) list with unsorted elements
-        counter_processing: (int)
+        counter_processing: (int) number of processes running
     """
-    print(counter_processing)
     if len(unsorted_list) > 1:
 
         middle_list = len(unsorted_list) // 2
